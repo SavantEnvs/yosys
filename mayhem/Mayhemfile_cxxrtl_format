@@ -1,0 +1,9 @@
+project: savantenvs/yosys
+target: cxxrtl_format
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/cxxrtl_format/testsuite
+cmds:
+  - cmd: /mayhem/cxxrtl_format
+    libfuzzer: true
+    timeout: 30
