@@ -1,0 +1,9 @@
+project: savantenvs/yosys
+target: yosys_const
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/yosys_const/testsuite
+cmds:
+  - cmd: /mayhem/yosys_const
+    libfuzzer: true
+    timeout: 30
